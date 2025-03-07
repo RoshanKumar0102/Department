@@ -1,0 +1,422 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f7f7f7, #eaeaea);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Main Container */
+.main-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #751f1f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.navigation a.active {
+  color: #333; /* Dark text color for contrast */
+  background: #fff; /* White background for active button */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for the active link */
+}
+
+.navigation a:hover {
+  color: #333;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
+/* Dropdown Link Styling */
+.dropdown-content a,
+.sub-dropdown-content a {
+  text-decoration: none;
+  display: block;
+  color: #000000;
+  padding: 8px 12px;
+}
+
+.dropdown-content a:hover,
+.sub-dropdown-content a:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Section Headers */
+h1 {
+  font-size: 2.5rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1::after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background: #751f1f;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+/* Aboutvvit Section */
+
+
+.about-description::first-letter {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #751f1f;
+  margin-right: 5px;
+}
+
+/* About Vision Section Styling */
+.about-vision {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #751f1f;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.vision-mission {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.vision-heading {
+  font-size: 2rem;
+  color: #751f1f;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #f0a500;
+  padding-bottom: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.vision-text {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.vision-list {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-top: 20px;
+  padding-left: 30px;
+  list-style-type: disc;
+}
+
+.vision-list li {
+  margin-bottom: 15px;
+}
+
+.vision-list li strong {
+  color: #751f1f;
+}
+
+
+
+/* About Section */
+.about-section {
+  padding: 40px 20px;
+  background: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: justify;
+  word-spacing: -1px; /* Reduces the space between words */
+  letter-spacing: -0.2px; /* Slightly reduces space between letters */
+  line-height: 1.4; 
+}
+
+.about-section .content .text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.about-section .content .image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-section .content .image img:hover {
+  transform: scale(1.05);
+}
+
+/* Applications Section */
+.applications-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.application-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.application {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.application:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.application p {
+  text-align: justify;
+  word-spacing: -1px; /* Reduces the space between words */
+  letter-spacing: -0.2px; /* Slightly reduces space between letters */
+  line-height: 1.4; /* Adjusts line height for better readability */
+}
+.application img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.application h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.application p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Job Opportunities Section */
+/* Job Section Styling */
+.jobs-section {
+  padding: 50px 20px;
+  background: linear-gradient(145deg, #f7f7f7, #eaeaea);
+}
+
+.jobs-section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #751f1f;
+  margin-bottom: 20px;
+}
+
+.jobs-section p {
+  text-align: center;
+  color: #555;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.job-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.job {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #e1e1e1);
+  border-radius: 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.job p {
+  text-align: justify;
+  word-spacing: -1px; /* Reduces the space between words */
+  letter-spacing: -0.2px; /* Slightly reduces space between letters */
+  line-height: 1.4; /* Adjusts line height for better readability */
+}
+
+
+.job:hover {
+  transform: translateY(-10px);
+}
+
+.job img {
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.job:hover img {
+  transform: scale(1.1);
+}
+
+.job h1 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #751f1f;
+  position: relative;
+}
+
+.job p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Line Shrink Effect */
+.line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3px;
+  background: #751f1f;
+  transition: width 0.4s ease;
+}
+
+.job:hover .line {
+  width: 20%;
+}
+
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #751f1f;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

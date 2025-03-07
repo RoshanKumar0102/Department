@@ -1,0 +1,132 @@
+/* Global Styles */
+body {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease-in-out;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Header */
+h1 {
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: white;
+}
+
+/* Form Select Dropdowns */
+select.form-select {
+    border: 2px solid #007bff;
+    transition: 0.3s;
+}
+
+select.form-select:focus {
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.6);
+}
+
+/* Buttons */
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-info:hover {
+    background-color: #17a2b8;
+    transform: scale(1.05);
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Table */
+.table {
+    margin-top: 10px;
+}
+
+.table th {
+    background: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #343a40;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #495057;
+    color: white;
+}
+
+.dark-mode h1 {
+    color: #17a2b8;
+}
+
+.dark-mode .table th {
+    background: #17a2b8;
+}
+
+.dark-mode .btn {
+    color: white;
+}
+
+/* Logout Button */
+.logout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #751f1f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+    background: #0056b3;
+}

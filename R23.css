@@ -1,0 +1,154 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end; /* Align all elements to the right */
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #751f1f;
+}
+
+.header-title {
+  font-size: 28px; /* Adjust size */
+  font-weight: bold;
+  color: #fff; /* White text color */ /* Optional text shadow */
+  text-decoration: none; /* Remove underline for link */
+  margin-left: -40px; /* Preserve your custom alignment */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-title:hover { /* Optional hover effect for the title */
+  transform: scale(1.0); /* Slight scaling on hover */
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #f9f3f3;
+  padding: 8px 12px;
+}
+.navigation a.active {
+  color: #333; /* Dark text color for contrast */
+  background: #fff; /* White background for active button */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for the active link */
+}
+
+/* Ensure hover effect still works */
+.navigation a:hover {
+  color: #333;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
+/* Dropdown Link Styling */
+.dropdown-content a,
+.sub-dropdown-content a {
+  text-decoration: none;
+  display: block;
+  color: #000000;
+  padding: 8px 12px;
+}
+
+.dropdown-content a:hover,
+.sub-dropdown-content a:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Table Styles */
+.table-container {
+  margin-top: 20px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.custom-table thead th {
+  background-color: hwb(198 55% 14%);
+  color: white;
+  font-weight: bold;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.custom-table a {
+  text-decoration: none;
+  color: #007BFF;
+  transition: all 0.3s ease;
+}
+
+.custom-table a:hover {
+  color: #FF4500;
+  text-decoration: underline; /* Add underline on hover */
+}

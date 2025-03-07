@@ -1,0 +1,704 @@
+body {
+  margin: 0;
+  font-family: 'Calibri', sans-serif;
+  color: white;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Main Container */
+.main-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #751f1f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-family: 'Calibri', sans-serif;
+  font-size: 28px; /* Adjust size */
+  font-weight: bold;
+  color: #fff; /* White text color */ /* Optional text shadow */
+  text-decoration: none; /* Remove underline for link */
+  margin-left: -40px; /* Preserve your custom alignment */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-title:hover { /* Optional hover effect for the title */
+  transform: scale(1.0); /* Slight scaling on hover */
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navigation a:hover {
+  color: #333;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
+/* Dropdown Link Styling */
+.dropdown-content a,
+.sub-dropdown-content a {
+  text-decoration: none;
+  display: block;
+  color: #000000;
+  padding: 8px 12px;
+}
+
+.dropdown-content a:hover,
+.sub-dropdown-content a:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Section Headers */
+h1 {
+  font-family: 'Calibri', sans-serif;
+  font-size: 2.5rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1::after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background: #751f1f;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.intro {
+  background-color: white;
+  padding: 20px 20px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.intro-title {
+  font-family: 'Calibri', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #751F1F;
+  letter-spacing: 3px; /* Adjust this value as needed */
+}
+.slideshow-section {
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  margin: 20px auto;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  padding-top: 42.86%; /* 21:9 aspect ratio (9 / 21 * 100) */
+  overflow: hidden;
+  background: #000; /* Optional: black background for the slideshow */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /* Hide slides by default */
+}
+
+.slide img, .slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures content fills the container while maintaining aspect ratio */
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Updates Section */
+.updates-section {
+  background-color: #751F1F;
+  padding: 1px 0;
+  margin-top: -20px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.updates-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.updates-label {
+  font-family: 'Calibri', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  margin-right: 15px;
+  white-space: nowrap;
+}
+
+.updates-text {
+  font-family: 'Calibri', sans-serif;
+  flex-grow: 1;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.updates-text a {
+  color: white;
+  text-decoration: none;
+}
+
+.updates-text a:hover {
+  text-decoration: underline;
+}
+.preview-section {
+  display: flex;
+  padding: 50px;
+}
+
+.preview-text {
+  flex: 2;
+}
+
+.preview-text h1 {
+  font-family: 'Calibri', sans-serif;
+  color: #751F1F;
+  text-align: left; /* Moves the heading to the left */
+}
+
+.preview-text h1::after {
+  content: '';
+  width: 150px;
+  height: 3px;
+  background: #751F1F;
+  display: block;
+  margin: 5px 0 0 0;
+  border-radius: 2px;
+}
+
+.preview-text p {
+  font-family: 'Calibri', sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #0c0c0c;
+  text-align: justify;
+  word-spacing: -1px; /* Reduces the space between words */
+  letter-spacing: -0.2px; /* Slightly reduces space between letters */
+  line-height: 1.4; 
+}
+.preview-video {
+  display: flex: ;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.preview-video iframe {
+  width: 550px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+/* Achievements Section */
+.achievements-section {
+  margin-top: -80px;
+  padding: 60px;
+  text-align: center;
+  background-color: white;
+}
+
+.achievements-section h1 {
+  font-family: 'Calibri', sans-serif;
+  font-size: 2.5rem;
+  color: #751f1f;
+  margin-bottom: 20px;
+}
+
+.achievements-section p {
+  font-family: 'Calibri', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.achievement-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 300px; /* Set a consistent height for all items */
+}
+
+.achievement-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the container while maintaining aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.achievement-item:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.achievement-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  padding: 20px;
+}
+
+.achievement-item:hover .achievement-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.achievement-overlay h2 {
+  margin-left: -40px;
+  margin-bottom: 10px;
+}
+
+.achievement-overlay p {
+  font-family: 'Calibri', sans-serif;
+  font-size: 1rem;
+}
+
+.fade {
+  animation: fadeEffect 3s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Events Section */
+.events-section {
+  margin-top: -50px;
+  text-align: center;
+  padding: 70px 0;
+  background-color: white;
+}
+
+.events-section h1 {
+  font-family: 'Calibri', sans-serif;
+  font-size: 2.5rem;
+  color: #751f1f;
+  margin-bottom: 20px;
+}
+
+.events-section p {
+  font-family: 'Calibri', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Scrollable Image Container */
+.scrollable-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 20px;
+}
+.scrollable-container:hover > :not(:hover){
+  opacity: 0.3;
+}
+/* Image Box Styling */
+.image-box {
+  width: 48%; /* Two images per scroll */
+  height: 300px; /* Adjust height as needed */
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.image-box:hover {
+  transform: scale(1.05); /* Slight enlargement */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-box:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+
+.view-more-container {
+  text-align: right;
+  margin-right: 20px; /* Adjust alignment to the right */
+}
+
+.view-more-button {
+  display: inline-block;
+  padding: 10px 40px;
+  font-size: 16px;
+  color: #751F1F;
+  border: none;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+.background-overlay-section {
+  position: relative;
+  height: 600px; /* Full viewport height */
+  background: url('Photos/BDAY.jpeg') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Cover the entire section */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+/* Add animation for the disappearing effect */
+body {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0.2; /* Starting opacity */
+  }
+  to {
+    opacity: 0; /* Fully transparent */
+  }
+}
+
+.background-section.scrolled {
+  animation: fadeOut 1s forwards; /* Apply the fade-out animation when scrolling */
+}
+.higher-education-section {
+  text-align: center;
+  margin: 40px 20px;
+  margin-bottom: 140px;
+}
+
+.higher-education-section h1 {
+  font-family: 'Calibri', sans-serif;
+  font-size: 2rem;
+  color: #751f1f;
+  margin-bottom: 10px;
+}
+
+.higher-education-section p {
+  font-family: 'Calibri', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.student-grid {
+  display: flex; /* Enable flexbox for horizontal alignment */
+  justify-content: center; /* Center the grid horizontally */
+  gap: 20px; /* Add spacing between cards */
+  flex-wrap: wrap; /* Allow wrapping to the next line on smaller screens */
+}
+
+.student-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px; /* Set a fixed width for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.student-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #751f1f;
+}
+
+.student-card div {
+  text-align: left;
+}
+
+.student-card h2 {
+  font-family: 'Calibri', sans-serif;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #751f1f;
+}
+
+.student-card p {
+  font-family: 'Calibri', sans-serif;
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+
+
+.faculty-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.faculty-content {
+  flex: 1;
+  margin-right: 10px;
+  margin-left: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.faculty-title {
+  font-family: 'Calibri', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #751f1f;
+}
+
+.faculty-description {
+  font-family: 'Calibri', sans-serif;
+  font-size: 18px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.faculty-profiles-button {
+  font-family: 'Calibri', sans-serif;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 16px;
+  color: #751f1f;
+  border: 2px solid #751f1f;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.faculty-profiles-button:hover {
+  background-color: #751f1f;
+  color: white;
+}
+
+/* Styling for Faculty Images with Hover Text */
+.image-container {
+  position: relative;
+  border: 2px solid #751F1F;
+  width: 270px;
+  height: 320px;
+  margin-bottom: 20px;
+  margin-top: -20px; /* Adjust the margin-top here if needed for individual images */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.0);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-container2 {
+  position: relative;
+  border: 2px solid #751F1F;
+  width: 150px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-top: 10px; /* Adjust the margin-top here if needed for individual images */
+}
+
+.image-container2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container2:hover img {
+  transform: scale(1.0);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay with Hover Text */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1; /* Show on hover */
+  }
+
+  .image-container2:hover .overlay {
+    opacity: 1; /* Show on hover */
+  }
+  
+  .overlay h2 {
+    font-family: 'Calibri', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .left-column {
+    margin-top: 70px; /* Add this to bring the left column photo down */
+  }
+  
+  
+  
+
+/* Right Column Layout */
+.right-column {
+  margin-left: -120px;
+  display: flex;
+  flex: 2;
+  gap: 70px;
+}
+
+.right-column-part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.footer {
+  background-color: #751F1F;
+  text-align: center;
+  padding: 5px;
+  color: #f2ebeb;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updates</title>
+  <link rel="icon" href="Photos/Favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="Updates.css">
+</head>
+<body>
+  <header class="header">
+    <a href="https://www.vvitguntur.com" class="header-title">Vasireddy Venkatadri Institute of Technology</a>
+    <nav class="navigation">
+      <a href="Index.php">Home</a>
+      <a href="About.html">About</a>
+      <a href="Faculty.html">Faculty</a>
+      <a href="Updates.html" class="active">Updates</a>
+      <a href="Regulation.html">Regulations</a>
+      <a href="Events.html">Events</a>
+      <a href="login.php">Login</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="intro-title">Updates</div>
+  </section>
+
+  
+
+  <div id="popup1" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
+      <h2>Update Details</h2>
+      <p>Date: 30-10-2024</p>
+      <p>Description: 4-1 Regular Semester Examination Time Table </p>
+      <a href="PDF/2024-25 B.Tech 4-1 (R20) Regular-Supply Examinations, November-2024 Time Table.pdf" target="_blank">View Time Table</a>
+    </div>
+  </div>
+
+  <div id="popup2" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+      <h2>Update Details</h2>
+      <p>Date: 30-10-2024</p>
+      <p>Description: 3-1 Regular Semester Examination Time Table</p>
+      <a href="PDF/2024-25 B.Tech 3-1 (R20) Regular-Supply Examinations, November-2024 Time Table.pdf" target="_blank">View Time Table</a>
+    </div>
+  </div>
+
+  <div id="popup3" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
+      <h2>Update Details</h2>
+      <p>Date: 30-11-2024</p>
+      <p>Description: 2-1 Regular Semester Examination Time Table</p>
+      <a href="PDF/2024-25 B.Tech 2-1 (R23) Regular Examinations, December-2024 Time Table.pdf" target="_blank">View Time Table</a>
+    </div>
+  </div>
+  <div id="popup4" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup4')">&times;</span>
+      <h2>Update Details</h2>
+      <p>Date: 24-01-2025</p>
+      <p>Description:AID R20 Course Structure and Syllabus</p>
+      <a href="PDF/AID R20 Final Course Structure & Syllabus (1).pdf" target="_blank">View Syllabus</a>
+    </div>
+  </div>
+  <div id="popup5" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup5')">&times;</span>
+      <h2>Update Details</h2>
+      <p>Date: 25-01-2025</p>
+      <p>Description:3-2 Regular Mid - I Examination Time Table </p>
+      <a href="PDF/2024-25 III B.Tech II Sem Mid-1 Time Table  February-2024.pdf" target="_blank">View Syllabus</a>
+    </div>
+  </div>
+  <section class="updates-section">
+    <div class="update-item" onclick="openPopup('popup1')">
+      <p class="update-date">30-10-2024</p>
+      <p class="update-description">4-1 Regular Semester Examination Time Table Released</p>
+    </div>
+    <div class="update-item" onclick="openPopup('popup2')">
+      <p class="update-date">30-10-2024</p>
+      <p class="update-description">3-1 Regular Semester Examination Time Table Released</p>
+    </div>
+    <div class="update-item" onclick="openPopup('popup3')">
+      <p class="update-date">30-11-2024</p>
+      <p class="update-description">2-1 Regular Semester Examination Time Table Released</p>
+    </div>
+    <div class="update-item" onclick="openPopup('popup4')">
+      <p class="update-date">24-01-2025</p>
+      <p class="update-description">AID R20 Course Structure and Syllabus</p>
+    </div>
+    <div class="update-item" onclick="openPopup('popup5')">
+      <p class="update-date">25-01-2025</p>
+      <p class="update-description">3-2 Regular Mid - I Examination Time Table Released</p>
+    </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 VVIT - Artificial Intelligence & Data Science. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Ensure all pop-ups are hidden when the page loads
+    window.onload = () => {
+      document.querySelectorAll('.popup').forEach((popup) => {
+        popup.style.display = 'none';
+      });
+    };
+  
+    function openPopup(popupId) {
+      // Close all other open pop-ups
+      document.querySelectorAll('.popup').forEach((popup) => {
+        popup.style.display = 'none';
+      });
+  
+      // Open the specific pop-up
+      const popup = document.getElementById(popupId);
+      popup.style.display = 'flex'; // Center the pop-up using flex
+      popup.classList.add('show-popup');
+    }
+  
+    function closePopup(popupId) {
+      const popup = document.getElementById(popupId);
+      popup.classList.remove('show-popup'); // Smooth transition
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 300); // Wait for the fade-out effect
+    }
+  
+    // Auto-close the pop-up when a PDF link is clicked
+    document.querySelectorAll('.popup-content a').forEach((link) => {
+      link.addEventListener('click', function () {
+        const popup = this.closest('.popup');
+        if (popup) {
+          closePopup(popup.id);
+        }
+      });
+    });
+  </script>
+  
+  
+  
+</body>
+</html>
